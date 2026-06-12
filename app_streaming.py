@@ -54,10 +54,7 @@ def get_model_files():
 
 @st.cache_resource
 def load_model(model_path):
-    m = joblib.load(model_path)
-    if hasattr(m, 'feature_names_in_'):
-        del m.feature_names_in_
-    return m
+    return joblib.load(model_path)
 
 # =============================================================================
 # SIDEBAR
@@ -70,7 +67,7 @@ if len(model_files) == 0:
     st.sidebar.error("Model tidak ditemukan!")
     st.stop()
 
-model_names = [f.replace('model\\', '').replace('.joblib', '') for f in model_files]
+model_names = [f.replace('model/', '').replace('.joblib', '') for f in model_files]
 selected_model_name = st.sidebar.selectbox("Pilih Model:", model_names)
 selected_model_path = model_files[model_names.index(selected_model_name)]
 
