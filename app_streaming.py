@@ -105,7 +105,7 @@ def get_kategori(rating):
 # =============================================================================
 
 st.title("Prediksi Rating IMDb")
-st.markdown("Prediksi rating IMDb konten streaming berdasarkan genre, platform, skor Rotten Tomatoes, dan lainnya menggunakan Machine Learning.")
+st.markdown("Mau tahu kira-kira berapa rating IMDb sebuah film atau serial? Isi informasinya di bawah, dan kita prediksi ratingnya untuk kamu.")
 st.markdown("Masukkan informasi konten untuk prediksi rating IMDb.")
 
 # Input
